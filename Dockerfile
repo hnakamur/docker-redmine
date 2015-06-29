@@ -19,8 +19,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E1DD270288B4E6030699E45F
  && gem install --no-document bundler \
  && rm -rf /var/lib/apt/lists/* # 20150323
 
-RUN apt-get install -y language-pack-ja
-
 RUN cd /opt/redmine/data/plugins \
  && git clone https://github.com/hnakamur/redmine_issue_rank.git
 
