@@ -59,5 +59,7 @@
 # # mkdir -p /redmine/plugins/redmine_attach_by_url
 # # wget https://github.com/nodecarter/redmine_attach_by_url/archive/master.tar.gz -O - | tar -zvxf - --strip=1 -C /redmine/plugins/redmine_attach_by_url
 # # bundle exec rake jobs:work RAILS_ENV=production &
-# 
-# bundle install --without development tests
+
+# redmine issue rank plugin
+mkdir -p /redmine/plugins/redmine-issue-rank
+wget https://github.com/hnakamur/redmine-issue-rank/archive/master.tar.gz -O - | tar -zvxf - --strip=1 -C /redmine/plugins/redmine-issue-rank
