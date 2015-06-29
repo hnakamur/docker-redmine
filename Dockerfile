@@ -19,6 +19,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E1DD270288B4E6030699E45F
  && gem install --no-document bundler \
  && rm -rf /var/lib/apt/lists/* # 20150323
 
+RUN apt-get install -y language-pack-ja-base
+
 ADD assets/setup/ /app/setup/
 RUN chmod 755 /app/setup/install
 RUN /app/setup/install
