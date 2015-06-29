@@ -21,6 +21,9 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E1DD270288B4E6030699E45F
 
 RUN apt-get install -y language-pack-ja
 
+RUN cd /opt/redmine/data/plugins \
+ && git clone https://github.com/hnakamur/redmine_issue_rank.git
+
 ADD assets/setup/ /app/setup/
 RUN chmod 755 /app/setup/install
 RUN /app/setup/install
